@@ -1,0 +1,70 @@
+
+// ==========================================================================
+// Color
+// ==========================================================================
+$black: #000;
+$black-overlay: rgba(0, 0, 0, 0.8);
+
+$charcoal: #262626;
+$charcoal-opacity-dark: rgba(38, 38, 38, 0.54);
+$charcoal-opacity-light: rgba(38, 38, 38, 0.2); 
+$white: #fff;
+$white-opacity-dark: rgba(255, 255, 255, 0.54);
+$white-opacity-light: rgba(255, 255, 255, 0.2);
+
+
+$grey-light: #f1f2f2;
+$grey: #e5e5e5;
+$grey-dark: #808285;
+
+$color-primary: #3c777c; // @TODO selected by user
+$color-secondary: #f4535b; // @TODO selected by user
+//$color-secondary: null; // @TODO selected by user
+
+@if $color-secondary == null {
+  $color-secondary: $color-primary !global;
+}
+
+$color-primary-text: $white; // @TODO selected by user
+$color-secondary-text: $white; // @TODO selected by user
+
+@if $color-secondary-text == null {
+  $color-secondary-text: $color-primary-text !global;
+}
+
+@if $color-primary-text == $black {
+  $color-text: $black !global;
+}
+@else {
+  $color-text: $color-primary !global;
+}
+
+// ==========================================================================
+// Distance
+// ==========================================================================
+$header-height: 148px;
+$distance-paragraph: 30px;
+$element-height: 54px;
+
+
+// ==========================================================================
+// Misc
+// ==========================================================================
+$round-corner: 5px;
+$box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+
+// ==========================================================================
+// Transition
+// ==========================================================================
+$speed: 300ms;
+$speed-fast: 150ms;
+$ease: $ease-out-quart;
+
+// ==========================================================================
+// z-index
+// ==========================================================================
+$z-below: 50;
+$z-content: 100;
+$z-above: 150;
+$z-header: 300;
+$z-debug: 999;

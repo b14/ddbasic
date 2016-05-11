@@ -1,0 +1,37 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'FaktPro-Normal';
+  src: url("../../fonts/FaktPro-Normal.eot");
+  src: url("../../fonts/FaktPro-Normal.eot?#iefix") format("embedded-opentype"), url("../../fonts/FaktPro-Normal.woff") format("woff"), url("../../fonts/FaktPro-Normal.ttf") format("truetype"), url("../../fonts/FaktPro-Normal.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'FaktPro-Bold';
+  src: url("../../fonts/FaktPro-Bold.eot");
+  src: url("../../fonts/FaktPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/FaktPro-Bold.woff") format("woff"), url("../../fonts/FaktPro-Bold.ttf") format("truetype"), url("../../fonts/FaktPro-Bold.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'FaktPro-Light';
+  src: url("../../fonts/FaktPro-Light.eot");
+  src: url("../../fonts/FaktPro-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/FaktPro-Light.woff") format("woff"), url("../../fonts/FaktPro-Light.ttf") format("truetype"), url("../../fonts/FaktPro-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'FaktPro-Thin';
+  src: url("../../fonts/FaktPro-Thin.eot");
+  src: url("../../fonts/FaktPro-Thin.eot?#iefix") format("embedded-opentype"), url("../../fonts/FaktPro-Thin.woff") format("woff"), url("../../fonts/FaktPro-Thin.ttf") format("truetype"), url("../../fonts/FaktPro-Thin.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon/icomoon.eot?1i93lg");
+  src: url("../../fonts/icomoon/icomoon.eot?1i93lg#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?1i93lg") format("truetype"), url("../../fonts/icomoon/icomoon.woff?1i93lg") format("woff"), url("../../fonts/icomoon/icomoon.svg?1i93lg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*# sourceMappingURL=addfont.css.map */

@@ -1,0 +1,18 @@
+@import 'base';
+
+//
+// This file contains rules for basic elements that are formattet the same way, 
+// no matter what context they appear in.
+
+.content-wrapper {
+  padding-top: $header-height; // Compensate for fixed header
+}
+
+// Go-to link button
+.more-link {
+  clear: left;
+  text-align: left;
+  a {
+    @include button(arrow-right, $charcoal-opacity-dark);
+  }
+}

@@ -1,0 +1,138 @@
+@import 'base';
+
+// ==========================================================================
+// News
+// ==========================================================================
+.news-list-item {
+  position: relative;
+  .news-image-wrapper {
+    a {
+      display: block;
+      position: relative;
+      background-color: $grey;
+      padding-top: 56.25%;
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        @include transform(translate(-50%, -50%))
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        @include transition(background-color $speed $ease);
+      }
+    }
+  }
+  .news-text {
+    margin-top: 10px;
+    .news-heading {
+      margin-bottom: 5px;
+      a {
+        color: $charcoal;
+      }
+    }
+    .news-info {
+      color: $charcoal-opacity-dark;
+      .news-label {
+        &:after {
+          content: '-';
+          margin: 0 5px;
+        }
+      }
+    }
+    .news-list-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 25px 15px;
+      box-sizing: border-box;
+      color: $white;
+      pointer-events: none;
+      opacity: 0;
+      @include transition(opacity $speed $ease);
+    }
+  }
+  &:hover {
+    .news-image-wrapper {
+      a {
+        &:after {
+          background-color: $black-overlay;
+        }
+      }
+    }
+    .news-list-content {
+      opacity: 1;
+    }
+  }
+  // First news item is styled different
+  &:first-child {
+    .news-image-wrapper {
+      a {
+        padding-top: 40.54%;
+        &:after {
+          @include linear-gradient(
+            transparent 0%, 
+            transparent 55%, 
+            $charcoal-opacity-light 80%, 
+            $charcoal-opacity-dark 100%
+          );
+          @include transition(background-color $speed $ease);
+          opacity: 1;
+        }
+      }
+    }
+    .news-text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 25px 15px 5px;
+      margin-top: 0;
+      box-sizing: border-box;
+      pointer-events: none;
+      .news-heading {
+        @include font('header');
+        a {
+          color: $white;
+        }
+      }
+      .news-info {
+        margin-bottom: 20px;
+        color: $white-opacity-dark;
+      }
+      .news-list-content {
+        @include font('header-small');
+        @include span-columns(6 of 8);
+        @include transition(
+          height $speed $ease,
+          opacity $speed $ease
+        );
+        position: static;
+        height: 0;
+        padding: 0;
+        
+      }
+    }
+    &:hover {
+      .news-image-wrapper {
+        a {
+          &:after {
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+        }
+      }
+    }
+  }
+  
+}

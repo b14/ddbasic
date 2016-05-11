@@ -1,0 +1,55 @@
+@import 'base';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  @include font('base');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $charcoal;
+}
+
+// Headers
+h1,h2,h3 {
+  margin-top: 0;
+  font-weight: $weight-normal;
+}
+h1 {
+  @include font('header-large');
+  color: $color-primary;
+  margin-bottom: 30px;
+}
+h2 {
+  @include font('header');
+  margin-bottom: 30px;
+}
+h3 {
+  @include font('header-small');
+  margin-bottom: 20px;
+}
+
+// Paragraph
+p {
+  margin-bottom: $distance-paragraph;
+}
+
+// Images
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $color-text;
+  &:hover {
+    color: $charcoal;
+  }
+}
+
+// Lists
+ul {
+  margin: 0 0 $distance-paragraph;
+}

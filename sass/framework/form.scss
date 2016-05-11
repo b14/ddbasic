@@ -1,0 +1,210 @@
+@import 'base';
+
+// ==========================================================================
+// General
+// ==========================================================================
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 25px 0;
+  border-top: 1px solid $charcoal-opacity-light;
+  &:last-of-type {
+    border-bottom: 1px solid $charcoal-opacity-light;
+  }
+}
+legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  @include font('header-small');
+  margin-bottom: 10px;
+}
+
+// ==========================================================================
+// Text input
+// ==========================================================================
+input[type="text"] {
+  @include placeholder {
+    @include font('base');
+    line-height: 1em;
+  }
+  @include font('base');
+  width: 100%;
+  height: $element-height;
+  padding: 23px 15px 18px;
+  border: none;
+  border-radius: $round-corner;
+  line-height: 1em;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// ==========================================================================
+// Checkbox and radiobutton
+// ==========================================================================
+input[type="checkbox"],
+input[type="radio"]  {
+  display: none;
+  & + label {
+    display: block;
+    padding: 7px 0 1px 42px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      margin: 0 10px 5px 0;
+      background-color: $grey;
+    }
+  }
+}
+.form-checkboxes,
+.form-radios {
+  .form-item {
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+  }
+}
+
+// Checkbox
+input[type="checkbox"] {
+  & + label {
+    &:before {
+      border-radius: $round-corner;
+    }
+  }
+  &:checked {
+    & + label {
+      @include place-icon(check, $color-primary-text, 28px);
+      &:after {
+        left: 0;
+      }
+      &:before {
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+// Radio button
+input[type="radio"]  {
+  & + label {
+    &:before {
+      border-radius: 50%;
+    }
+    &:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      background-color: $white;
+    }
+  }
+  &:checked {
+    & + label {
+      &:after {
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Select list
+// ==========================================================================
+.form-type-select {
+  position: relative;
+  overflow: hidden;
+  height: $element-height;
+  background-color: $white;
+  border: 1px solid $grey;
+  border-radius: $round-corner;
+  @include place-icon(arrow-down-small, $charcoal-opacity-dark);
+  &:after {
+    right: 0;
+  }
+  &:before {
+    content: '';
+    display: block;
+    background-color: $grey;
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    width: $element-height;
+    height: $element-height;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+}
+
+select {
+  @include font('base');
+  position: absolute;
+  z-index: 500;
+  width: 110%;
+  height: 52px;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 20px 0 12px 10px;
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  &::-ms-expand {
+    display: none;
+  }
+
+}
+
+// ==========================================================================
+// Search form
+// ==========================================================================
+.form-item-search-block-form {
+  margin: 0;
+  > label {
+    display: none;
+  }
+  input[type="text"].form-autocomplete {
+    background-image: none;
+  }
+}
+
+
+// ==========================================================================
+// Submit & form action
+// ==========================================================================
+.form-actions {
+  margin: 0;
+}
+input[type="submit"]  {
+  @include appearance(none);
+  @include font('base');
+  display: block;
+  width: 100%;
+  height: $element-height;
+  padding: 23px 15px 18px;
+  border: none;
+  border-radius: $round-corner;
+  color: $white;
+  background-color: $charcoal;
+  line-height: 1em;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+
+
+

@@ -1,0 +1,39 @@
+@import 'base';
+
+// All views
+.view {
+  .view-content {
+    > ul {
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+
+// View ding news
+.view-ding-news {
+  .news-list-item {
+    @include span-columns(4);
+    margin-bottom: 30px;
+    &:first-child {
+      @include span-columns(8);
+    }
+    
+    // @TODO We hide some fields here
+    // Should they be removed elsewhere?
+    .news-author,
+    .news-link {
+      display: none;
+    }
+  }
+  // Frontpage view
+  &.view-display-id-ding_news_frontpage_list {
+    .news-list-item {
+      //@include omega(5n);
+      //@include omega(5n + 2);
+      &:nth-child(5n + 2) {
+        margin-right: 0;
+      }
+    }
+  }
+}

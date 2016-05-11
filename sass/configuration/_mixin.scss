@@ -1,0 +1,90 @@
+// ==========================================================================
+// Add-ons for Bourbon Neat
+// ==========================================================================
+
+// Omega reset
+@mixin omega-reset($nth, $columns) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// ==========================================================================
+// Icons and mixins for placing icon and button with icon
+// ==========================================================================
+
+// Icons
+%icon-arrow-down-small {
+  content: "\e900";
+}
+%icon-arrow-down {
+  content: "\e901";
+}
+%icon-arrow-left {
+  content: "\e902";
+}
+%icon-arrow-right {
+  content: "\e904";
+}
+%icon-arrow-up {
+  content: "\e905";
+}
+%icon-close {
+  content: "\e907";
+}
+%icon-menu {
+  content: "\e908";
+}
+%icon-print {
+  content: "\e90a";
+}
+%icon-profile {
+  content: "\e90b";
+}
+%icon-search {
+  content: "\e90c";
+}
+%icon-arrow-right-small {
+  content: "\e903";
+}
+%icon-plus {
+  content: "\e909";
+}
+%icon-check {
+  content: "\e906";
+}
+
+//
+// Mixin for placing icon
+@mixin place-icon($icon, $color: $black, $size: 54px) {
+  position: relative;
+  &:after {
+    @extend %icon-#{$icon};
+    font-family: 'icomoon';
+    font-size: $size;
+    color: $color;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}
+
+//
+// Mixin for making button with icon
+@mixin button($icon, $color: $black) {
+  @include place-icon($icon, $color);
+  width: 100%;
+  float: left;
+  background-color: $color-secondary;
+  color: $white;
+  border-radius: $round-corner;
+  padding: 20px 80px 14px 15px;
+  &:after {
+    right: 7px;
+  }
+}

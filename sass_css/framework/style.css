@@ -1,0 +1,39 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.more-link a:after {
+  content: "\e904"; }
+
+.content-wrapper {
+  padding-top: 148px; }
+
+.more-link {
+  clear: left;
+  text-align: left; }
+  .more-link a {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #f4535b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px 80px 14px 15px; }
+    .more-link a:after {
+      font-family: 'icomoon';
+      font-size: 54px;
+      color: rgba(38, 38, 38, 0.54);
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      display: block;
+      position: absolute;
+      top: 0; }
+    .more-link a:after {
+      right: 7px; }
+
+/*# sourceMappingURL=style.css.map */

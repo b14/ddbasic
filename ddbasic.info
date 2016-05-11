@@ -1,0 +1,52 @@
+;----------// Theme Information
+  name        = DDBasic
+  description = The default theme for the danish library distribution
+  core        = 7.x
+  release     = 7.x-1.x
+
+
+;----------// Stylesheets
+  stylesheets[all][] = sass_css/base/addfont.css
+  stylesheets[all][] = sass_css/base/standart.css
+  
+  stylesheets[all][] = sass_css/framework/field.css
+  stylesheets[all][] = sass_css/framework/footer.css
+  stylesheets[all][] = sass_css/framework/form.css
+  stylesheets[all][] = sass_css/framework/header.css
+  stylesheets[all][] = sass_css/framework/menu.css
+  stylesheets[all][] = sass_css/framework/node.css
+  stylesheets[all][] = sass_css/framework/panel.css
+  stylesheets[all][] = sass_css/framework/style.css
+  stylesheets[all][] = sass_css/framework/view.css
+  
+
+;----------// JavaScripts
+  scripts[] = scripts/jquery.cookie.js
+  scripts[] = scripts/respond.min.js
+  scripts[] = scripts/jquery.scrollto.js
+  scripts[] = scripts/html5shiv.js
+  scripts[] = scripts/equalize.min.js
+  scripts[] = scripts/scalefix.js
+  scripts[] = scripts/selectivizr-min.js
+  _scripts[] = scripts/ddbasic.topbar.menu.min.js
+  scripts[] = scripts/ddbasic.topbar.menu.js
+  scripts[] = scripts/ddbasic.common.min.js
+  scripts[] = scripts/ddbasic.facet.min.js
+  scripts[] = scripts/ddbasic.search.min.js
+  
+  scripts[] = scripts/main.js
+
+
+;----------// Regions
+  regions[header]            = Header
+  regions[navigation]        = Navigation
+  regions[content_top]       = Content top
+  regions[content]           = Primary content
+  regions[secondary_content] = Secondary content
+  regions[tertiary_content]  = Tertiary content
+  regions[attachment_first]  = Attachment first
+  regions[attachment_second] = Attachment second
+  regions[attachment_third]  = Attachment third
+  regions[attachment_fourth] = Attachment fourth
+  regions[footer]            = Footer
+  regions[bottom]            = Bottom

@@ -1,0 +1,24 @@
+@import 'base';
+
+.footer {
+  background-color: $charcoal;
+  color: $white;
+  a {
+    color: $white;
+    @include transition(color $speed $ease);
+    &:hover {
+      color: $white-opacity-dark;
+    }
+  }
+  .footer-inner {
+    @include outer-container;
+    padding: 50px 0 100px;
+    > .panel-pane {
+      @include span-columns(3);
+      @include omega(4n);
+      .pane-title {
+        @include font('header-small');
+      }
+    }
+  }
+}
